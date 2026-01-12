@@ -1,0 +1,7 @@
+﻿@page
+@model FriendsAndFoes2.Web.Pages.Admin.StatusModel
+<h2>Admin Status</h2>
+
+<p><strong>User:</strong> @Model.Username</p>
+<p><strong>Environment:</strong> @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")</p>
+<p><strong>Server Time:</strong> @DateTime.Now</p>
