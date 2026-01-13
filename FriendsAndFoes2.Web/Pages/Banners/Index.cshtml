@@ -1,0 +1,39 @@
+﻿@page
+@model FriendsAndFoes2.Web.Pages.Banners.IndexModel
+
+
+<h2>Banners</h2>
+
+<p>
+    <a asp-page="Create">Create a new Banner</a>
+</p>
+
+@if (!Model.Banners.Any())
+{
+    <p>You don’t have any banners yet.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Structure</th>
+                <th>Domain</th>
+                <th>Created (UTC)</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var b in Model.Banners)
+        {
+            <tr>
+                <td>@b.Name</td>
+                <td>@b.Structure</td>
+                <td>@b.Domain</td>
+                <td>@b.CreatedUtc</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+

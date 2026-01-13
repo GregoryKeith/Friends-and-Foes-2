@@ -1,0 +1,31 @@
+﻿@page
+@model FriendsAndFoes2.Web.Pages.Banners.CreateModel
+
+<h2>Create Banner</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Banner.Name" class="form-label"></label>
+        <input asp-for="Banner.Name" class="form-control" />
+        <span asp-validation-for="Banner.Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Banner.Structure" class="form-label"></label>
+        <input asp-for="Banner.Structure" class="form-control" />
+        <span asp-validation-for="Banner.Structure" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Banner.Domain" class="form-label"></label>
+        <input asp-for="Banner.Domain" class="form-control" />
+        <span asp-validation-for="Banner.Domain" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
