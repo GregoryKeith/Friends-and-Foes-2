@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FriendsAndFoes2.Web.Models;
 
 namespace FriendsAndFoes2.Web.Data
 {
@@ -9,5 +10,6 @@ namespace FriendsAndFoes2.Web.Data
             : base(options)
         {
         }
+        public DbSet<Banner> Banners { get; set; } = default!;
     }
 }
